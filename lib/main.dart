@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -38,9 +37,12 @@ class WelcomeScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
+            flex: 3,
             child:Container(
+              width: double.infinity,
               decoration: BoxDecoration(
-                image:DecorationImage(image: NetworkImage('https://images.unsplash.com/photo-1636382448252-17367df17b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80'))
+                image:DecorationImage(
+                  image: NetworkImage('https://images.unsplash.com/photo-1636382448252-17367df17b99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80'))
               ),
             ) 
             ),
@@ -58,7 +60,26 @@ class WelcomeScreen extends StatelessWidget {
                         style: Theme.of(context).textTheme.headline
                       )
                     ]
-                  ))
+                  )),
+                  FittedBox(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20),
+                      padding: EdgeInsets.symmetric(horizontal: 25,vertical: 16),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.amber[400]
+                      ),
+                      child: Row(
+                        children:[
+                          Text('Start Learning',style: Theme.of(context).textTheme.button!.copyWith(
+                            color: Colors.black
+                          ),),
+                          SizedBox(width: 30,),
+                          Icon(Icons.arrow_forward)
+                        ]
+                      ),
+                    ),
+                  )
                 ],
               ) 
               )
