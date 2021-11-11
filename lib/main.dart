@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/sign_in.dart';
 void main() {
   runApp(MyApp());
 }
@@ -17,15 +18,20 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold
           ),
           button: TextStyle(
-            color: Colors.red
+            color: Colors.amber
           ),
           headline: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.normal
           )
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.amber.withOpacity(0.5))
+          )
         )
       ),
-      home: WelcomeScreen(),
+      home: SignInScreen(),
     );
   }
 }
