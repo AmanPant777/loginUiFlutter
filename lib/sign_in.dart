@@ -31,18 +31,22 @@ class SignInScreen extends StatelessWidget {
                         Text('SIGN UP',style: Theme.of(context).textTheme.button,)
                       ]
                     ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(Icons.alternate_email,color: Colors.amber),
-                        Expanded(
-                          child: TextField(
-                          decoration: InputDecoration(
-                            hintText: "Email Address "
-                          ),
-                        )
-                        )
-                      ],
+                    Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 25),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alternate_email,color: Colors.amber),
+                          Expanded(
+                            child: TextField(
+                            decoration: InputDecoration(
+                              hintText: "Email Address "
+                            ),
+                          )
+                          )
+                        ],
+                      ),
                     ),
                     Row(
                       children: [
@@ -56,6 +60,52 @@ class SignInScreen extends StatelessWidget {
                         )
                         )
                       ],
+                    ),
+                    Spacer(),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 20),
+                      child: Row(
+                        children: [
+                         Container(
+                           padding: EdgeInsets.all(15),
+                           decoration: BoxDecoration(
+                             shape: BoxShape.circle,
+                             border: Border.all(
+                               color: Colors.white.withOpacity(0.5)
+                             )
+                           ),
+                           child: Icon(
+                             Icons.android,
+                             color: Colors.white.withOpacity(0.7),
+                           ),
+                         ),
+                         SizedBox(width: 20),
+                          Container(
+                           padding: EdgeInsets.all(15),
+                           decoration: BoxDecoration(
+                             shape: BoxShape.circle,
+                             border: Border.all(
+                               color: Colors.white.withOpacity(0.5)
+                             )
+                           ),
+                           child: Icon(
+                             Icons.chat,
+                             color: Colors.white.withOpacity(0.7),
+                           ),
+                         ),
+                         Spacer(),
+                           Container(
+                           padding: EdgeInsets.all(15),
+                           decoration: BoxDecoration(
+                             shape: BoxShape.circle,
+                            color: Colors.amber
+                           ),
+                           child: Icon(
+                             Icons.forward,
+                             color: Colors.black.withOpacity(0.7),
+                           ),
+                         ),
+                      ],),
                     )
                 ],
               )

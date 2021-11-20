@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
           )
         )
       ),
-      home: SignInScreen(),
+      home: WelcomeScreen(),
     );
   }
 }
@@ -67,22 +67,27 @@ class WelcomeScreen extends StatelessWidget {
                       )
                     ]
                   )),
-                  FittedBox(
-                    child: Container(
-                      margin: EdgeInsets.only(top: 20),
-                      padding: EdgeInsets.symmetric(horizontal: 25,vertical: 16),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Colors.amber[400]
-                      ),
-                      child: Row(
-                        children:[
-                          Text('Start Learning',style: Theme.of(context).textTheme.button!.copyWith(
-                            color: Colors.black
-                          ),),
-                          SizedBox(width: 30,),
-                          Icon(Icons.arrow_forward)
-                        ]
+                  InkWell(
+                    onTap: (){
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SignInScreen()));
+                    },
+                    child: FittedBox(
+                      child: Container(
+                        margin: EdgeInsets.only(top: 20),
+                        padding: EdgeInsets.symmetric(horizontal: 25,vertical: 16),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.amber[400]
+                        ),
+                        child: Row(
+                          children:[
+                            Text('Start Learning',style: Theme.of(context).textTheme.button!.copyWith(
+                              color: Colors.black
+                            ),),
+                            SizedBox(width: 30,),
+                            Icon(Icons.arrow_forward)
+                          ]
+                        ),
                       ),
                     ),
                   )
